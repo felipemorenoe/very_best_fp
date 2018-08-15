@@ -26,7 +26,13 @@
 
       <% @venues.each do |venue| %>
       <tr>
-        <td><%= venue.neighborhood.name %></td>
+        <td>
+          <% if venue.neighborhood.present? %>
+            <a href="/neighborhoods/<%= venue.neighborhood.id %>">
+              <%= venue.neighborhood.name %>
+            </a>
+          <% end %>
+        </td>
         <td><%= venue.address %></td>
         <td><%= venue.name %></td>
         <td>
