@@ -15,4 +15,8 @@ class Dish < ApplicationRecord
 
   # Validations
 
+  validates :cuisine_id, :presence => true
+
+  validates :name, :presence => true
+
 end

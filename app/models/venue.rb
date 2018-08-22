@@ -35,4 +35,8 @@ class Venue < ApplicationRecord
 
   # Validations
 
+  validates :address, :presence => { :message => "No address" }
+
+  validates :name, :presence => true
+
 end
